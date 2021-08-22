@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>myqr</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+	<div class="index">
+		<h1>MyQR</h1>
+		<br>
+		<div class="form">
+			<form action="/download" method = "POST">
+			<input id="text" name="text" type="text" placeholder="Enter Your Text"><br><br>
+			<button type="generate" class="btn btn-primary btn-block btn-large">Generate</button>
+		</form>
+		</div>
+	</div>
+
+
+</body>
+</html>
