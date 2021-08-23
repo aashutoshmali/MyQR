@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MyQR</title>
 	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='index.css') }}">
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body class="body">
 	<div class="index">
 		<h1>MyQR</h1>
 		<br>
 		<div class="form">
-			<form  method = "POST">
-			<input id="text" name="text" type="text" placeholder="Enter Your Text" REQUIRED><br><br>
-			<button type="generate" class="btn btn-primary btn-block btn-large">Generate</button>
-		</form>
+			<form action="/download" method = "POST">
+				<h2 style="color:rgb(8, 8, 8);">Download your QR </h2>
+				<br>
+				<br>
+				<button type="download" class="btn btn-primary btn-block btn-large">Save as .png </button>
+				<br>
+				<br>
+				</form>
+				<form action="/save" method="POST">
+				<button type="save"  class="btn btn-primary btn-block btn-large">Save as .svg</button>
+				</form>
 		</div>
 	</div>
 
