@@ -14,6 +14,8 @@
 			<form action="/download" method = "POST">
 				<h2 style="color:rgb(8, 8, 8);">Download your QR </h2>
 				<br>
+				<canvas id="qr-code"></canvas>
+				<br>
 				<br>
 				<button type="download" class="btn btn-primary btn-block btn-large">Save as .png </button>
 				<br>
@@ -21,10 +23,34 @@
 				</form>
 				<form action="/save" method="POST">
 				<button type="save"  class="btn btn-primary btn-block btn-large">Save as .svg</button>
+		
 				</form>
+
+
 		</div>
 	</div>
-
-
+ 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+		<script>
+			var qr;
+			(function() {
+                    qr = new QRious({
+                    element: document.getElementById('qr-code'),
+                    size: 250,
+                    value: '{{text}}'
+                });
+            })();
+            
+            function generateQRCode() {
+                var {{text}} = document.getElementById("qr-text").value;
+                document.getElementById("qr-result").innerHTML = "QR code for " + {{text}} +":";
+                alert({{text}});
+                qr.set({
+                    foreground: 'black',
+                    size: 250,
+                    value: {{text}}
+                });
+            }
+		</script>
 </body>
 </html>
