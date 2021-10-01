@@ -18,8 +18,7 @@ Myqr:>python app.py
 #Screenshot 3
 ![Screenshot (13)](https://user-images.githubusercontent.com/72407796/135573510-e31e2c07-437b-4a69-8eec-6e0faf46dead.png)
 
-#Output
-![qr](https://user-images.githubusercontent.com/72407796/135573572-4f0154bc-50d5-4723-b10e-5effc49bab24.png)
+
 
 
 
